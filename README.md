@@ -3,10 +3,10 @@ This repo contains a consistent python environment using dockers with my solutio
 🚧🚧currently only part 1 but will eventually be part 2 as well🚧🚧  
 In addition to this it also contains both a bash and powershell script that will build and run said solutions in the python environment.
 
-## 🟢 Getting started
+## 🟢 Getting started 🟢
 You only need to run the git clone on this repository in order to use this it.
 
-## 🟢 Running locally
+## 🟢 Running locally 🟢
 Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.  
 If you have python installed and updated to v.3+ then you can also run it the usual way on Linux:  
 ```python3 ./filename.py```   
@@ -14,7 +14,7 @@ or on windows:
 ```python3 .\filename.py```  
   
 
-## 👍 Docker
+## 👍 Docker 👍
 So the docker used here is very simple and only ensures that the files can be run within a python environment.  
 You can manually run these using:  
 docker build -t python-env  
@@ -22,7 +22,7 @@ And then do the:
 docker run --rm \  
 With the follow up commands but this is all in the scrips that will automate the process.
 
-## ㊗️ Script
+## ㊗️ Script ㊗️
 There are two scripts first is bash which is used in GitHub Actions and Linux systems, the second one is a PowerShell script that does the same but runs on Windows systems.  
 The scripts will build the docker environment if it does not already exist and then run the specified files inside of said environment. 
 
