@@ -13,7 +13,7 @@ if (-not $image) {
     docker build -t python-env .
 }
 
-docker run --rm -it `
+docker run --rm `
   -v "${PWD}:/workspace" `
   -w /workspace `
   python-env `
