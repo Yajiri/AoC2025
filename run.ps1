@@ -1,7 +1,20 @@
-docker build -t python-env .
+param(
+    [string]$Script = "python/test.py"
+)
 
-docker run --rm `
+$image = docker images -q python-env
+
+if ($image) {
+    Write-Host "Build already exists"
+}
+
+if (-not $image) {
+    Write-Host "Building python-env..."
+    docker build -t python-env .
+}
+
+docker run --rm -it `
   -v "${PWD}:/workspace" `
   -w /workspace `
   python-env `
-  python quest1/day1.py
+  python $Script
