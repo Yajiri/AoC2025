@@ -18,4 +18,4 @@ jobs:
         run: find .
 
       - name: Run tests
-        run: python -m unittest discover -s python -v
+        run: python -m unittest discover -s python -p "test*.py" -v
