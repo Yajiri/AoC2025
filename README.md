@@ -1,11 +1,11 @@
 # Advent of Code 2025
-This repo contains a consistent python environment using dockers with my solutions for the 2025 Advent of Code problems. (currently only part 1 but will eventually be part 2 as well) 
+This repo contains a consistent python environment using dockers with my solutions for the 2025 Advent of Code problems. 🚧🚧currently only part 1 but will eventually be part 2 as well🚧🚧 
 In addition to this it also contains both a bash and powershell script that will build and run said solutions in the python environment.
 
-## Getting started
+## 🟢 Getting started
 You only need to run the git clone on this repository in order to use this it.
 
-## Running locally
+## 🟢 Running locally
 Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.  
 If you have python installed and updated to v.3+ then you can also run it the usual way on Linux:  
 ```python3 ./filename.py```   
