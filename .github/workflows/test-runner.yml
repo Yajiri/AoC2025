@@ -18,4 +18,7 @@ jobs:
         run: find .
 
       - name: Run tests
+        run: python -m unittest discrover -s python/day1 -v
+
+      - name: Run tests
         run: python -m unittest discover
