@@ -45,7 +45,7 @@ You can also just run:
 ```.\run.ps1```    
 This will run the day1/solution.py as I set that for standard if nothing else is specified. 
 
-## :warning: *You might get this when trying to run PowerShell*:  
+## :warning: *You might get this when trying to run PowerShell* :warning: :  
 Cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_policies at https:/go.microsoft.com/fwlink/?LinkID=135170.  
 If this happens try running:  
 ```Get-ExecutionPolicy```    
