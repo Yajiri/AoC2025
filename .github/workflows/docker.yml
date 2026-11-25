@@ -1,0 +1,22 @@
+name: Build on push
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - feature/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./build.sh
+
+      - name: Run build script
+        run: ../build.sh

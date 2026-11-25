@@ -17,5 +17,5 @@ jobs:
       - name: Show files
         run: find .
 
-      - name: Run tests
+      - name: Run day 1 test
         run: python -m unittest discover -s python/day1 -v
