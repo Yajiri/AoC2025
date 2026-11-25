@@ -18,7 +18,4 @@ jobs:
         run: find .
 
       - name: Run tests
-        run: python -m unittest discover -s python/day1 -v
-
-      - name: Run tests
-        run: python -m unittest discover
+        run: python -m unittest discover -s python -v
