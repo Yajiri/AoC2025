@@ -1,5 +1,6 @@
 # 🎄🎄 Advent of Code 2025 🎄🎄
-This repo contains a consistent python environment using dockers with my solutions for the 2025 Advent of Code problems. 🚧🚧currently only part 1 but will eventually be part 2 as well🚧🚧  
+This repo contains a consistent python environment using dockers with my solutions for the 2025 Advent of Code problems.  
+🚧🚧currently only part 1 but will eventually be part 2 as well🚧🚧  
 In addition to this it also contains both a bash and powershell script that will build and run said solutions in the python environment.
 
 ## 🟢 Getting started
