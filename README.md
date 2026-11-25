@@ -6,7 +6,12 @@ In addition to this it also contains both a bash and powershell script that will
 You only need to run the git clone on this repository in order to use this it.
 
 ## Running locally
-Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.
+Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.  
+If you have python installed and updated to v.3+ then you can also run it the usual way on Linux:  
+```python3 ./filename.py```   
+or on windows:  
+```python3 .\filename.py```  
+  
 
 ## 👍 Docker
 So the docker used here is very simple and only ensures that the files can be run within a python environment.  
