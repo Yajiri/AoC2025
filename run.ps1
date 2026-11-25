@@ -1,5 +1,5 @@
 param(
-    [string]$Script = "python/test.py"
+    [string]$Script = "day1/solution.py"
 )
 
 $image = docker images -q python-env
@@ -17,4 +17,4 @@ docker run --rm -it `
   -v "${PWD}:/workspace" `
   -w /workspace `
   python-env `
-  python $Script
+  python python/$Script
