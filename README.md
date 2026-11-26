@@ -29,9 +29,8 @@ With the follow up commands but this is all in the scrips that will automate the
 There are two scripts first is bash which is used in GitHub Actions and Linux systems, the second one is a PowerShell script that does the same but runs on Windows systems.<br>  
 The scripts will build the docker environment if it does not already exist and then run the specified files inside of said environment.<br> 
 
-The commando to run the scripts are<br> 
-For bash:  
-build.sh<br>     
+The commando to run the docker building and code running scripts are<br> 
+For bash:       
 <pre><code>./build.sh dayX/solution.py</code></pre>  
 X can be any day 1-12, and if you want to run the tests on the code instead of getting the answer then change solution.py to test_solution.py<br>
 
