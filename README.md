@@ -38,11 +38,11 @@ This will run the day1/solution.py as I set that for standard if nothing else is
 
 
 For PowerShell:  
-```.\run.ps1 dayX/solution.py```    
+```.\build.ps1 dayX/solution.py```    
 X can be any day 1-12, and if you want to run the tests on the code instead of getting the answer then change solution.py to test_solution.py
 
 You can also just run:  
-```.\run.ps1```    
+```.\build.ps1```    
 This will run the day1/solution.py as I set that for standard if nothing else is specified. 
 
 ## :warning: *You might get this when trying to run PowerShell* :warning:  
