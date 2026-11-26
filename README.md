@@ -17,9 +17,9 @@ or on windows:
 ## 👍 Docker 👍
 So the docker used here is very simple and only ensures that the files can be run within a python environment.  
 You can manually run these using:  
-docker build -t python-env  
+```docker build -t python-env``` 
 And then do the:  
-docker run --rm \  
+```docker run --rm \```  
 With the follow up commands but this is all in the scrips that will automate the process.
 
 ## ㊗️ Script ㊗️
