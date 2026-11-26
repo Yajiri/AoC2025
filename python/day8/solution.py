@@ -33,9 +33,9 @@ def junction_boxes(file):
     #Saves the 10 shortest
     shortest_10 = pairs[:1000]
 
-    print("The 10 shortest connections: ")
-    for d, a, b in shortest_10:
-        print(points[a], "<->", points[b], "distance² =", d)
+    #print("The 10 shortest connections: ")
+    #for d, a, b in shortest_10:
+        #print(points[a], "<->", points[b], "distance² =", d)
 
     #Graph
     graph = {i: [] for i in range(len(points))}
@@ -72,7 +72,7 @@ def junction_boxes(file):
 
     sizes.sort(reverse=True)
 
-    print("\nCircuit sizes:", sizes)
+    #print("\nCircuit sizes:", sizes)
 
     answer = sizes[0] * sizes[1] * sizes[2]
 
