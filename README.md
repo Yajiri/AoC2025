@@ -8,9 +8,10 @@ You only need to run the git clone on this repository in order to use it.
 
 <h2> 🟢 Running locally 🟢</h2>
 Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.  
-If you have python installed and updated to v.3+ then you can also run it the usual way on Linux:  
-```python3 ./filename.py```   
-or on windows:  
+If you have python installed and updated to v.3+ then you can also run on   
+Linux:  
+```python3 ./filename.py```    
+Windows:  
 ```python3 .\filename.py```  
   
 
