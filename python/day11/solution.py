@@ -1,13 +1,9 @@
 from pathlib import Path
-script_dir = Path(__file__).parent
-input_file = script_dir / "input.txt"
-#Never worked with trees in Python so this was a nice exercise
+
 class Node:
     def __init__(self, name, parent=None):
         self.name = name
-        #Java, Node parent;
         self.parent = parent
-        #Java ArrayList<Node> children = new ArrayList<>();
         self.children = []
 
 def exists_in_parents(current, target):
@@ -18,8 +14,6 @@ def exists_in_parents(current, target):
     return False
 
 def search(current, graph):
-    #Java, ArrayList<String> moves = graph.get(current.name);
-    #Python = dict.get(). dict no arrayList
     moves = graph.get(current.name)
     if moves is None:
         return
@@ -44,17 +38,16 @@ def count_paths(node):
         paths += count_paths(child)
     return paths
 
-def main():
+def main(file):
     grid = []
 
-    with open(input_file, "r") as f:
+    with open(file, "r") as f:
         for line in f:
             grid.append(line.strip())
 
     start_point = "you"
     root = Node(start_point)
 
-    #Java uses HashMap<String,ArrayList<String>>
     graph = {}
 
     for line in grid:
@@ -64,13 +57,14 @@ def main():
                     continue
         from_node = parts[0]
 
-        #Java ArrayList<String> move = new ArrayList<>();
         moves = []
         for move in parts[1].split():
             moves.append(move)
         graph[from_node] = moves
     search(root, graph)
     print_tree(root, 0)
-    print("Paths to out: ", count_paths(root))
+    return count_paths(root)
 
-main()
+if __name__ == "__main__":
+    file = Path(__file__).parent.parent / "inputs" / "input11.txt"
+    print(main(file))

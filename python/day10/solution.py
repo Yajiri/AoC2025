@@ -68,7 +68,6 @@ def main(file):
 
     return total_value
 
-#This is just to ensure that we don't run the main() if some other file want to inherit functions from the python file.
 if __name__ == "__main__":
     file = Path(__file__).parent.parent / "inputs" / "input10.txt"
     main(file)
