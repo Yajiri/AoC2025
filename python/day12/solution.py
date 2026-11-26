@@ -2,8 +2,6 @@ from dataclasses import dataclass
 from datetime import timedelta
 import time
 from pathlib import Path
-dir_path = Path(__file__).parent
-file_path = dir_path / "input.txt"
 
 @dataclass
 class Puzzle:
@@ -22,11 +20,7 @@ Board = list[list[int]]
 
 def all_counts_zero(counts):
     return all(c == 0 for c in counts) 
-    #Above code does the same as bellow code, but looks more python. 
-    #for c in counts:
-    #    if c != 0:
-    #        return False
-    #    return True
+
     
 def rotate_90(net):
     h = len(net)
@@ -41,7 +35,6 @@ def rotate_90(net):
 
 def generate_rotations(net):
     forms = []
-    #This is like in rust with the: let mut current = net.clone(); but python  version.
     current = [row[:] for row in net]
     for _ in range(4):
         already_seen = False
@@ -114,11 +107,11 @@ def solve(board, nets_with_rotations, counts, nodes_explored, node_limit):
                     remove_piece(board, net, x, y)
     return False
 
-def parse_input(path):
+def parse_input(file):
     nets = []
     puzzles = []
     
-    with open(path, "r") as f:
+    with open(file, "r") as f:
         lines = [line.rstrip("\n") for line in f]
     i = 0
     while i < len(lines):
@@ -168,10 +161,10 @@ def parse_input(path):
         i += 1
     return ParsedInput(nets, puzzles)
 
-def main():
+def main(file):
     counter = 0
 
-    parsed = parse_input(file_path)
+    parsed = parse_input(file)
     nets = parsed.nets
     puzzles = parsed.puzzles
 
@@ -209,26 +202,26 @@ def main():
 
             required_area += count * net_areas[i]
 
-        print(
-            "Puzzle",
-            puzzle.width,
-            "x",
-            puzzle.height,
-            "required area:",
-            required_area,
-            "board area:",
-            board_area
-        )
+        # print(
+        #     "Puzzle",
+        #     puzzle.width,
+        #     "x",
+        #     puzzle.height,
+        #     "required area:",
+        #     required_area,
+        #     "board area:",
+        #     board_area
+        # )
 
         if required_area > board_area:
-            print(
-                "No solution for",
-                puzzle.width,
-                "x",
-                puzzle.height,
-                "(pieces require more area than the board)"
-            )
-            print()
+            # print(
+            #     "No solution for",
+            #     puzzle.width,
+            #     "x",
+            #     puzzle.height,
+            #     "(pieces require more area than the board)"
+            # )
+            # print()
             continue
 
         board = [
@@ -255,50 +248,51 @@ def main():
         if solved:
             counter += 1
 
-            print(
-                "Solved",
-                puzzle.width,
-                "x",
-                puzzle.height,
-                "in",
-                elapsed,
-                "nodes explored:",
-                nodes_explored[0]
-            )
+        #     print(
+        #         "Solved",
+        #         puzzle.width,
+        #         "x",
+        #         puzzle.height,
+        #         "in",
+        #         elapsed,
+        #         "nodes explored:",
+        #         nodes_explored[0]
+        #     )
 
-            for row in board:
-                print(
-                    "".join(
-                        "#" if cell > 0 else "."
-                        for cell in row
-                    )
-                )
+        #     for row in board:
+        #         print(
+        #             "".join(
+        #                 "#" if cell > 0 else "."
+        #                 for cell in row
+        #             )
+        #         )
 
-        else:
-            if (
-                nodes_explored[0] > node_limit
-                or elapsed > time_limit
-            ):
-                print(
-                    f"Stopped search for "
-                    f"{puzzle.width}x{puzzle.height} "
-                    f"(limit reached), "
-                    f"nodes explored: {nodes_explored[0]}, "
-                    f"time: {elapsed}"
-                )
-            else:
-                print(
-                    f"No solution found for "
-                    f"{puzzle.width}x{puzzle.height} "
-                    f"(exhaustive within limits), "
-                    f"nodes explored: {nodes_explored[0]}, "
-                    f"time: {elapsed}"
-                )
+        # else:
+        #     if (
+        #         nodes_explored[0] > node_limit
+        #         or elapsed > time_limit
+        #     ):
+        #         print(
+        #             f"Stopped search for "
+        #             f"{puzzle.width}x{puzzle.height} "
+        #             f"(limit reached), "
+        #             f"nodes explored: {nodes_explored[0]}, "
+        #             f"time: {elapsed}"
+        #         )
+        #     else:
+        #         print(
+        #             f"No solution found for "
+        #             f"{puzzle.width}x{puzzle.height} "
+        #             f"(exhaustive within limits), "
+        #             f"nodes explored: {nodes_explored[0]}, "
+        #             f"time: {elapsed}"
+        #         )
 
-        print()
+        # print()
 
-    print(f"Total amount of solved puzzles: {counter}")
+    return counter
 
 if __name__  == "__main__":
-    main()
+    file = Path(__file__).parent.parent / "inputs" / "input12.txt"
+    print(f"Total amount of solved puzzles:", main(file))
             
