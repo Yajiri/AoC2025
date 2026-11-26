@@ -15,7 +15,7 @@ jobs:
           python-version: "3.12"
 
       - name: Make script executable
-        run: chmod +x run_test.sh
+        run: chmod +x run_tests.sh
 
       - name: Run tests
-        run: ./run_test.sh
+        run: ./run_tests.sh
