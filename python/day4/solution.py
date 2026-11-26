@@ -1,36 +1,40 @@
 from pathlib import Path
 
-file = file = Path(__file__).parent / ".." / "inputs" / "input4.txt"
 
-with open(file, "r") as f:
-    grid = [line.strip() for line in f]
+def remove_paper(file):
+    with open(file, "r") as f:
+        grid = [line.strip() for line in f]
 
-rows = len(grid)
-cols = len(grid[0])
+    rows = len(grid)
+    cols = len(grid[0])
 
-dr = [-1,-1,-1,0,0,1,1,1]
-dc = [-1,0,1,-1,1,-1,0,1]
+    dr = [-1,-1,-1,0,0,1,1,1]
+    dc = [-1,0,1,-1,1,-1,0,1]
 
-count = 0;
+    count = 0;
 
-for r in range(rows):
-    for c in range(cols):
-        if grid[r][c] != '@':
-            continue
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] != '@':
+                continue
 
-        neighbors = 0
+            neighbors = 0
 
-        for i in range(len(dr)):
-            nr = r + dr[i]
-            nc = c + dc[i]
+            for i in range(len(dr)):
+                nr = r + dr[i]
+                nc = c + dc[i]
 
-            if (nr >= 0 and nr < rows and 
-                nc >= 0 and nc < cols and 
-                grid[nr][nc] == '@'):
-                neighbors += 1
+                if (nr >= 0 and nr < rows and 
+                    nc >= 0 and nc < cols and 
+                    grid[nr][nc] == '@'):
+                    neighbors += 1
 
-        removable = neighbors < 4
-        if removable:
-            count += 1
-            print("(", r, c, ") can be removed", sep="")
-print(count, "can be removed")
+            removable = neighbors < 4
+            if removable:
+                count += 1
+
+    return count
+
+if __name__ == "__main__":
+    file = file = Path(__file__).parent / ".." / "inputs" / "input4.txt"
+    print(remove_paper(file), "can be removed")
