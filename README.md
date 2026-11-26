@@ -4,7 +4,7 @@ This repo contains a consistent python environment using dockers with my solutio
 In addition to this it also contains both a bash and powershell script that will build and run said solutions in the python environment.
 
 ## 🟢 Getting started 🟢
-You only need to run the git clone on this repository in order to use this it.
+You only need to run the git clone on this repository in order to use it.
 
 ## 🟢 Running locally 🟢
 Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.  
