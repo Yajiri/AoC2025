@@ -19,3 +19,9 @@ jobs:
 
       - name: Run day 1 test
         run: python -m unittest discover -s python/day1 -v
+
+      - name: Run day 2 test
+        run: python -m unittest discover -s python/day2 -v
+
+      - name: Run day 3 test
+        run: python -m unittest discover -s python/day3 -v
