@@ -29,5 +29,8 @@ jobs:
       - name: Run day 4 test
         run: python -m unittest discover -s python/day4 -v
 
-      - name: Run day 4 test
+      - name: Run day 5 test
         run: python -m unittest discover -s python/day5 -v
+
+      - name: Run day 6 test
+        run: python -m unittest discover -s python/day6 -v
