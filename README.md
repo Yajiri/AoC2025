@@ -59,6 +59,6 @@ Cannot be loaded because running scripts is disabled on this system. For more in
 If this happens try running:  
 ```Get-ExecutionPolicy```    
 It should return something similar to:  
-Restricted  
+```Restricted```  
 The solution is to run:  
 ```Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass```    
