@@ -55,10 +55,13 @@ There is also a script to run the tests localy
 This will run the tests on every single excercise
 
 <h2 align="center"><i> :warning: You might get this when trying to run PowerShell :warning: </i></h2>
-Cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_policies at https:/go.microsoft.com/fwlink/?LinkID=135170.    
-If this happens try running:  
-```Get-ExecutionPolicy```      
-It should return something similar to:    
-```Restricted```    
-The solution is to run:    
-```Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass```      
+Cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_policies at https:/go.microsoft.com/fwlink/?LinkID=135170. 
+
+If this happens try running:    
+```Get-ExecutionPolicy```  
+
+It should return something similar to:     
+```Restricted```  
+
+The solution is to run:  
+```Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass```  
