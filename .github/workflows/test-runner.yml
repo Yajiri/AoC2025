@@ -14,23 +14,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run day 1 test
-        run: python -m unittest discover -s python/day1 -v
+      - name: Make script executable
+        run: chmod +x test.sh
 
-      - name: Run day 2 test
-        run: python -m unittest discover -s python/day2 -v
-
-      - name: Run day 3 test
-        run: python -m unittest discover -s python/day3 -v
-
-      - name: Run day 4 test
-        run: python -m unittest discover -s python/day4 -v
-
-      - name: Run day 5 test
-        run: python -m unittest discover -s python/day5 -v
-
-      - name: Run day 6 test
-        run: python -m unittest discover -s python/day6 -v
-
-      - name: Run day 7 test
-        run: python -m unittest discover -s python/day7 -v
+      - name: Run tests
+        run: ./test.sh
