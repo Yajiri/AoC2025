@@ -20,7 +20,6 @@ def search(current, graph):
     for move in moves:
         if exists_in_parents(current, move):
             continue
-        #Java: Node child = new Node(move, current)
         child = Node(move, current)
         current.children.append(child)
         search(child, graph)
@@ -62,7 +61,7 @@ def main(file):
             moves.append(move)
         graph[from_node] = moves
     search(root, graph)
-    print_tree(root, 0)
+    #print_tree(root, 0)
     return count_paths(root)
 
 if __name__ == "__main__":
