@@ -1,4 +1,4 @@
-<h1 align="center" color=red> 🎄🎄 Advent of Code 2025 🎄🎄</h1>
+<h1 align="center"> 🎄🎄 Advent of Code 2025 🎄🎄</h1>
 This repo contains a consistent python environment using dockers with my solutions for the 2025 Advent of Code problems.<br>  
 🚧🚧currently only part 1 but will eventually be part 2 as well🚧🚧<br>  
 In addition to this it also contains both a bash and powershell script that will build and run said solutions in the python environment.
