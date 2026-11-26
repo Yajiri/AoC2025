@@ -36,6 +36,9 @@ You can also run:
 ```./build.sh```    
 This will run the day1/solution.py as I set that for standard if nothing else is specified. 
 
+There is also a script to run the tests localy  
+```./run_tests.sh```  
+This will run the tests on every single excercise
 
 For PowerShell:  
 ```.\build.ps1 dayX/solution.py```    
@@ -44,6 +47,10 @@ X can be any day 1-12, and if you want to run the tests on the code instead of g
 You can also just run:  
 ```.\build.ps1```    
 This will run the day1/solution.py as I set that for standard if nothing else is specified. 
+
+There is also a script to run the tests localy  
+```./run_tests.ps1```  
+This will run the tests on every single excercise
 
 ## :warning: *You might get this when trying to run PowerShell* :warning:  
 Cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_policies at https:/go.microsoft.com/fwlink/?LinkID=135170.  
