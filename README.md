@@ -10,19 +10,19 @@ You only need to run the git clone on this repository in order to use it.
 Docker is the only thing that you are required to have on your PC in order to run the code files that are in the repository.<br>  
 If you have python installed and updated to v.3+ then you can also run on <br>   
 Linux:  <br>
-<pre><code>python3 ./filename.py</code></pre> <br>   
+<pre><code>python3 ./filename.py</code></pre>  
 Windows:  <br>
-<pre><code>python3 .\filename.py</code></pre>  <br>
+<pre><code>python3 .\filename.py</code></pre>
   
 
 <h2> 👍 Docker 👍</h2>
 So the docker used here is very simple and only ensures that the files can be run within a python environment.<br>
 You can manually run these using:<br>
-<pre><code>docker build -t python-env</code></pre><br>
+<pre><code>docker build -t python-env</code></pre>
 And then do the in Linux:<br>
-<pre><code>docker run --rm \</code></pre><br>
+<pre><code>docker run --rm \</code></pre>
 or Windows:<br>  
-<pre><code>docker run --rm ` </code></pre><br>  
+<pre><code>docker run --rm ` </code></pre>  
 With the follow up commands but this is all in the scrips that will automate the process.<br>
 
 <h2> ㊗️ Script ㊗️</h2>
@@ -32,37 +32,37 @@ The scripts will build the docker environment if it does not already exist and t
 The commando to run the scripts are<br> 
 For bash:<br>  
 build.sh<br>     
-<pre><code>./build.sh dayX/solution.py</code></pre><br>  
+<pre><code>./build.sh dayX/solution.py</code></pre>  
 X can be any day 1-12, and if you want to run the tests on the code instead of getting the answer then change solution.py to test_solution.py<br>
 
 You can also run:<br>  
-<pre><code>./build.sh</code></pre><br>    
+<pre><code>./build.sh</code></pre>   
 This will run the day1/solution.py as I set that for standard if nothing else is specified.<br> 
 
 There is also a script to run the tests localy<br>  
-<pre><code>./run_tests.sh</code></pre><br>  
+<pre><code>./run_tests.sh</code></pre> 
 This will run the tests on every single excercise<br>
 
 For PowerShell:<br>  
-<pre><code>.\build.ps1 dayX/solution.py</code></pre><br>    
+<pre><code>.\build.ps1 dayX/solution.py</code></pre>    
 X can be any day 1-12, and if you want to run the tests on the code instead of getting the answer then change solution.py to test_solution.py<br>
 
 You can also just run:<br>  
-<pre><code>.\build.ps1</code></pre><br>   
+<pre><code>.\build.ps1</code></pre>  
 This will run the day1/solution.py as I set that for standard if nothing else is specified.<br> 
 
 There is also a script to run the tests localy<br>  
-<pre><code>./run_tests.ps1</code></pre><br>  
+<pre><code>./run_tests.ps1</code></pre>  
 This will run the tests on every single excercise<br>
 
 <h2><i> :warning: You might get this when trying to run PowerShell :warning: </i></h2>
 Cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_policies at https:/go.microsoft.com/fwlink/?LinkID=135170.<br> 
 
 If this happens try running:<br>    
-<pre><code>Get-ExecutionPolicy</code></pre><br>  
+<pre><code>Get-ExecutionPolicy</code></pre>  
 
 It should return something similar to:<br>     
-<pre><code>Restricted</code></pre><br>  
+<pre><code>Restricted</code></pre>  
 
 The solution is to run:<br>  
 <pre><code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code></pre>  
