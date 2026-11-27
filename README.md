@@ -19,7 +19,7 @@ Windows:  <br>
 So the docker used here is very simple and only ensures that the files can be run within a python environment.<br>
 You can manually run these using:<br>
 <pre><code>docker build -t python-env</code></pre>
-And then do the in Linux:<br>
+And then do then for Linux:<br>
 <pre><code>docker run --rm \</code></pre>
 or Windows:<br>  
 <pre><code>docker run --rm ` </code></pre>  
