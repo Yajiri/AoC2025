@@ -64,4 +64,4 @@ It should return something similar to:
 <pre><code>Restricted</code></pre>  
 
 The solution is to run: 
-<pre><code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code></pre>  
+<pre><code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code></pre>
